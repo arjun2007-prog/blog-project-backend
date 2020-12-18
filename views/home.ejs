@@ -1,0 +1,13 @@
+<%-include("partials/header.ejs")-%>
+
+<h1>Home</h1>
+
+<p><%=homeHeading%></p>
+
+
+<% postsDisplay.forEach((blog)=>{ %>
+     <h1><%=blog.userTitle%></h1>
+     <p><%=blog.userBlog.substring(0, 100)%>...<a href="posts/<%=blog.userTitle%>">Read More</a></p>
+<% }) %>
+
+<%-include("partials/footer.ejs")-%>
